@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Consent Form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css"></link>
+        <link rel="stylesheet" href="static/css/style.css" type="text/css"></link>
+
+        <script src="static/lib/jquery-1.11.3.min.js" type="text/javascript"></script>
+        <script src="static/lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js"  type="text/javascript"></script>
+        <script src="static/lib/underscore-1.8.3.min.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <div id="header_template"></div>
+        <div id="container-consent" class="container">
+            <script type="text/javascript">
+            function onExit() {
+                window.close();
+            }
+
+            function getQueryParams(qs) {
+                qs = qs.split('+').join(' ');
+
+                var params = {},
+                    tokens,
+                    re = /[?&]?([^=]+)=([^&]*)/g;
+
+                while (tokens = re.exec(qs)) {
+                    params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+                }
+
+                return params;
+            }
+
+            function startExp() {
+                var code = getQueryParams(document.location.search).code;
+                window.location = 'exp?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}&code='+code;
+            }
+            </script>
+            <div id="consent_template"></div>
+        </div>
+        <script src="static/js/data/consent.js"></script>
+        <script src="static/js/templates/header.js"></script>
+        <script src="static/js/templates/consent/consent_template.js"></script>
+        <script src="static/js/view/consent_view.js"></script>
+        <script src="static/js/consent.js"></script>
+    </body>
+</html>

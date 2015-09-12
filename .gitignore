@@ -1,0 +1,7 @@
+.DS_Store
+/server.log
+/participants.db
+static/images/
+*.pyc
+
+/.psiturk_history
