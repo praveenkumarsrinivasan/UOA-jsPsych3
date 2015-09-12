@@ -14,11 +14,11 @@ import json
 import csv
 
 
-host   = '0.0.0.0'
+host   = 'localhost'
 user   = 'uoa'
 passwd = 'uoapasswd'
 db     = 'cognitive_intelligence'
-table  = 't_exp2'
+table  = 't_exp1'
 
 conn = mdb.connect(host, user, passwd, db)
 cursor = conn.cursor()
