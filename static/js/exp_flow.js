@@ -16,12 +16,12 @@ var completeHIT = function() {
 
 //start exp process
 var exp_flow = function(appModel) {
-    prt_task_exp(appModel);
+    //prt_task_exp(appModel);
     //memory_task_exp(appModel);
     //metacognition_task_exp(appModel);
     //metacognition_task2_exp(appModel);
     //questionaire_task_exp(appModel);
-    //testing_task_exp(appModel);
+    testing_task_exp(appModel);
     //testing_priming_task_exp(appModel);
     //thanks_task_exp(appModel);
 }

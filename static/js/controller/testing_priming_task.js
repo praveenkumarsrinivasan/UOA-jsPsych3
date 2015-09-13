@@ -333,8 +333,8 @@ var testing_priming_task_exp = function(appModel) {
             } else {
                 var val = appModel.testing_configCollection.allocation2[appModel.test_retry_times];
                 var allocation = allocationType[parseInt((val-1)/8, 10)];
-                //console.log(val);
-                //console.log(allocation);
+                console.log(val);
+                console.log(allocation);
                 if (allocation == 'related prime' || allocation == 'unrelated prime') {
                     testing_priming_task_exp(appModel);
                 } else {

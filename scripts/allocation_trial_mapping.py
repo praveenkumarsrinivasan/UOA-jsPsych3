@@ -139,7 +139,7 @@ allocation_trial_mapping = []
 
 allocation_trial_mapping.extend(initial_blocks)
 for val in allocations:
-    if val > 20 and val < 41:
+    if val > 16 and val < 33:
         allocation_trial_mapping.extend(priming_block)
     else:
         allocation_trial_mapping.extend(normal_block)

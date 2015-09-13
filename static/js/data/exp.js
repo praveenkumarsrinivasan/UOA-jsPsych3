@@ -11,8 +11,8 @@ var exp_data = {
     "meta2_min_points": 1,
     "questionnaire_min_points": 2,
 
-    "test_retry_times" : 5,
-    "test_priming_retry_times" : 5,
+    "test_retry_times" : 56,
+    "test_priming_retry_times" : 56,
 
     "test_min_points": 0,
     "test_priming_points": 0,
