@@ -137,9 +137,13 @@
 
                             <script>
                                 function openwindow() {
-                                    var code = document.getElementById('code').value;
-                                    //popup = window.open('{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
-                                    popup = window.open('{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}&code='+code,'Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes');
+                                    var code = document.getElementById('code').value.trim();
+                                    if (code == '') {
+                                        alert('Please enter Screening Code to proceed!');
+                                    } else {
+                                        //popup = window.open('{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
+                                        popup = window.open('{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}&code='+code,'Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes');
+                                    }
                                 }
                             </script>
 
