@@ -33,12 +33,12 @@ var exp_data = {
     "meta_image_timing_response": 2500,
     "meta_timing_post_trial": 1000,
 
-    "test_slider_timing_trials": [160, 200, 260, 220, 180, 240],
+    "test_slider_timing_trials": [160, 200, 160, 140, 180, 140],
     "test_slider_timing_response": 6000,
     "test_image_timing_response": 2500,
     "test_timing_post_trial": 1000,
 
-    "test_priming_slider_timing_trials": [160, 200, 260, 220, 180, 240],
+    "test_priming_slider_timing_trials": [160, 200, 160, 140, 180, 140],
     "test_slider_timing_response": 6000,
     "test_image_timing_response": 2500,
     "test_timing_post_trial": 1000,
