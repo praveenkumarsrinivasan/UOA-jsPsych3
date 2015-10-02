@@ -42,8 +42,10 @@ def main(args):
 
 
     with open(args[1], 'wb') as outfile:
+        outfile.write('cd $MTURK_CMD_HOME/bin/\n')
         for command in commands:
             outfile.write(command + '\n')
+        outfile.write('cd -\n')
         outfile.close()
 
 
