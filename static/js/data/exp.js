@@ -9,7 +9,7 @@ var exp_data = {
     "mem_min_points": 1,
     "meta_min_points": 1,
     "meta2_min_points": 1,
-    "questionnaire_min_points": 2,
+    "questionnaire_min_points": 4,
 
     "test_retry_times" : 56,
     "test_priming_retry_times" : 56,
@@ -42,8 +42,9 @@ var exp_data = {
     "test_slider_timing_response": 6000,
     "test_image_timing_response": 2500,
     "test_timing_post_trial": 1000,
-    
+
     "response_won":  "You have gained a point. Your total has gone up to ",
-    "response_lost": "You didn't gain a point. Your total is still "       
+    "response_lost": "You lost a point. Your total has gone down to  ",
+    "response_lost2": "You didn't gain a point. Your total is still "
 
 };

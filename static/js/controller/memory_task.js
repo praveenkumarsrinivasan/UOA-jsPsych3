@@ -109,6 +109,14 @@ var memory_task_exp = function(appModel) {
             }
             //else display the incorrect template
             else {
+                appModel.mem_exp_points--;
+                appModel.total_points--;
+                if (appModel.mem_exp_points < 0) {
+                    appModel.mem_exp_points = 0;
+                }
+                if (appModel.total_points < 0) {
+                    appModel.total_points = 0;
+                }
                 return _.template(appModel.incorrect)({'wrong_msg': ''});
             }
         },
@@ -199,6 +207,7 @@ var memory_task_exp = function(appModel) {
         on_finish: function() {
             //count the number of times the exp runs
             appModel.mem_retry_times++;
+            console.log(appModel.mem_exp_points);
 
             //if the user fails the test more than 5 times call exp_fail
             if (appModel.mem_retry_times >= appModel.exp_configCollection.mem_retry_times) {

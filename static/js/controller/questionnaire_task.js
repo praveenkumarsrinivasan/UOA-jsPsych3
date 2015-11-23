@@ -32,7 +32,7 @@ var questionnaire_task_exp = function(appModel) {
             //if user choses the right image then display the correct template
             if (getResponse(appModel.questionnaire1_correct_ans)) {
                 //award them 1 point
-                questionnaire_exp_points++;
+                appModel.questionnaire_exp_points++;
                 return _.template(appModel.correct)({'correct_msg': ''});
             }
             //else display the incorrect template
@@ -59,7 +59,7 @@ var questionnaire_task_exp = function(appModel) {
             //if user choses the right image then display the correct template
             if (getResponse(appModel.questionnaire2_correct_ans)) {
                 //award them 1 point
-                questionnaire_exp_points++;
+                appModel.questionnaire_exp_points++;
                 return _.template(appModel.correct)({'correct_msg': ''});
             }
             //else display the incorrect template
@@ -84,7 +84,6 @@ var questionnaire_task_exp = function(appModel) {
         var choice = -1;
         if (trials[current_trial].key_press > -1) { //if user responsed
             choice = parseInt(String.fromCharCode(trials[current_trial].key_press), 10);
-            console.log(choice);
         }
 
         if (flag == choice) {
@@ -116,7 +115,7 @@ var questionnaire_task_exp = function(appModel) {
             }
 
             //if user reaches '1' point i.e questionnaire_min_points call mem exp
-            if (questionnaire_exp_points == appModel.exp_configCollection.questionnaire_min_points) {
+            if (appModel.questionnaire_exp_points == appModel.exp_configCollection.questionnaire_min_points) {
                 testing_task_exp(appModel);
             }
             //else restart the test.

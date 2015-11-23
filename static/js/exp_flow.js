@@ -20,7 +20,7 @@ var exp_flow = function(appModel) {
     //memory_task_exp(appModel);
     //metacognition_task_exp(appModel);
     //metacognition_task2_exp(appModel);
-    //questionaire_task_exp(appModel);
+    //questionnaire_task_exp(appModel);
     //testing_task_exp(appModel);
     //testing_priming_task_exp(appModel);
     //thanks_task_exp(appModel);

@@ -28,7 +28,7 @@ var metacognition_task2_exp = function(appModel) {
     //define the blocks of the experiment
     var exp_name_block = {
         type: "text",
-        text: appModel.meta_title + "2",
+        text: appModel.meta_title + "<h4>Type 2 Training</h4>",
         cont_key: "mouse"
     };
 
@@ -88,12 +88,20 @@ var metacognition_task2_exp = function(appModel) {
                 //if user choses the right image then display the correct template
                 if (getResponse()) {
                     //award them 1 point
-                    //appModel.meta2_exp_points++;
-                    //appModel.total_points++;
+                    appModel.meta2_exp_points++;
+                    appModel.total_points++;
                     return _.template(appModel.correct)({'correct_msg': ''});
                 }
                 //else display the incorrect template
                 else {
+                    appModel.meta2_exp_points--;
+                    appModel.total_points--;
+                    if (appModel.meta2_exp_points < 0) {
+                        appModel.meta2_exp_points = 0;
+                    }
+                    if (appModel.total_points < 0) {
+                        appModel.total_points = 0;
+                    }
                     return _.template(appModel.incorrect)({'wrong_msg': ''});
                 }
             }
@@ -102,11 +110,11 @@ var metacognition_task2_exp = function(appModel) {
                 cloud_flag = 1;
                 //50% of the time award them '1' point
                 var prob = Math.floor((Math.random() * 2) + 1);
-                    appModel.response_change_in_points = appModel.exp_configCollection.response_lost;
+                    appModel.response_change_in_points = appModel.exp_configCollection.response_lost2;
                 if (prob == 2) {
-                    //appModel.response_change_in_points = appModel.exp_configCollection.response_won;
-                    //appModel.meta2_exp_points++;
-                    //appModel.total_points++;
+                    appModel.response_change_in_points = appModel.exp_configCollection.response_won;
+                    appModel.meta2_exp_points++;
+                    appModel.total_points++;
                 }
                 return appModel.maybe;
             }

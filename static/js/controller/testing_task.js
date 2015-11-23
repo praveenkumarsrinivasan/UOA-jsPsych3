@@ -150,6 +150,14 @@ var testing_task_exp = function(appModel) {
                         appModel.total_points++;
                         return _.template(appModel.correct)({'correct_msg': ''});
                     } else {
+                        appModel.test_exp_points--;
+                        appModel.total_points--;
+                        if (appModel.test_exp_points < 0) {
+                            appModel.test_exp_points = 0;
+                        }
+                        if (appModel.total_points < 0) {
+                            appModel.total_points = 0;
+                        }
                         //the user is confident and incorrect
                         return _.template(appModel.incorrect)({'wrong_msg': ''});
                     }
@@ -158,7 +166,9 @@ var testing_task_exp = function(appModel) {
                     //the user is not confident
                     //50% of the time award them '1' point
                     var prob = Math.floor((Math.random() * 2) + 1);
+                        appModel.response_change_in_points = appModel.exp_configCollection.response_lost2;
                     if (prob == 2) {
+                        appModel.response_change_in_points = appModel.exp_configCollection.response_won;
                         appModel.test_exp_points++;
                         appModel.total_points++;
                     }
@@ -176,13 +186,23 @@ var testing_task_exp = function(appModel) {
                         return _.template(appModel.correct)({'correct_msg': ''});
                     } else {
                         //the user is confident and incorrect
+                        appModel.test_exp_points--;
+                        appModel.total_points--;
+                        if (appModel.test_priming_exp_points < 0) {
+                            appModel.test_priming_exp_points = 0;
+                        }
+                        if (appModel.total_points < 0) {
+                            appModel.total_points = 0;
+                        }
                         return _.template(appModel.incorrect)({'wrong_msg': ''});
                     }
                 } else {
                     //the user is not confident
                     //50% of the time award them '1' point
                     var prob = Math.floor((Math.random() * 2) + 1);
+                        appModel.response_change_in_points = appModel.exp_configCollection.response_lost2;
                     if (prob == 2) {
+                        appModel.response_change_in_points = appModel.exp_configCollection.response_won;
                         appModel.test_exp_points++;
                         appModel.total_points++;
                     }

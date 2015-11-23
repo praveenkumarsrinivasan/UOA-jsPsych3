@@ -41,7 +41,7 @@ var metacognition_task_exp = function(appModel) {
     //define the blocks of the experiment
     var exp_name_block = {
         type: "text",
-        text: appModel.meta_title + "1",
+        text: appModel.meta_title + "<h4>Type 1 Training</h4>",
         cont_key: "mouse"
     };
 
@@ -107,6 +107,14 @@ var metacognition_task_exp = function(appModel) {
                 }
                 //else display the incorrect template
                 else {
+                    appModel.meta_exp_points--;
+                    appModel.total_points--;
+                    if (appModel.meta_exp_points < 0) {
+                        appModel.meta_exp_points = 0;
+                    }
+                    if (appModel.total_points < 0) {
+                        appModel.total_points = 0;
+                    }
                     return _.template(appModel.incorrect)({'wrong_msg': ''});
                 }
             }
@@ -115,11 +123,11 @@ var metacognition_task_exp = function(appModel) {
                 star_flag = 0;
                 //50% of the time award them '1' point
                 var prob = Math.floor((Math.random() * 2) + 1);
-                    appModel.response_change_in_points = appModel.exp_configCollection.response_lost;
+                    appModel.response_change_in_points = appModel.exp_configCollection.response_lost2;
                 if (prob == 2) {
                     appModel.response_change_in_points = appModel.exp_configCollection.response_won;
-                    //appModel.meta_exp_points++;
-                    //appModel.total_points++;
+                    appModel.meta_exp_points++;
+                    appModel.total_points++;
                 }
                 return appModel.maybe;
             }
@@ -239,7 +247,7 @@ var metacognition_task_exp = function(appModel) {
 
             if (star_flag == 1) {
                 //if the user reaches 5 points then call test exp
-                //if (appModel.meta_exp_points == appModel.exp_configCollection.meta_min_points) {
+                if (appModel.meta_exp_points == appModel.exp_configCollection.meta_min_points) {
                     //call test exp
                     //appModel.test_random_val = Math.floor((Math.random() * 2) + 1);
                     //if (appModel.test_random_val == 1) {
@@ -250,7 +258,9 @@ var metacognition_task_exp = function(appModel) {
 
                     metacognition_task2_exp(appModel);
                     //questionaire_task_exp(appModel);
-                //}
+                } else {
+                    metacognition_task_exp(appModel);
+                }
             }
             //else restart the test.
             else {
