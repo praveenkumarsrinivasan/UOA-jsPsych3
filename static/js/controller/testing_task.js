@@ -19,7 +19,7 @@ var testing_task_exp = function(appModel) {
     var testing_images_template = _.template(appModel.testing_images);
 
     var testing_bird;
-    var allocationIndex = parseInt((memory_bird-1)/8, 10);
+    var allocationIndex = parseInt((memory_bird-1)/8, 10);//8 images for each type
     //console.log(allocationIndex);
     //console.log(allocationType[allocationIndex]);
     if (allocationType[allocationIndex] == "large size") {
