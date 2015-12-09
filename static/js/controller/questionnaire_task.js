@@ -70,6 +70,60 @@ var questionnaire_task_exp = function(appModel) {
         cont_key: "mouse"
     };
 
+    var questionnaire3_block = {
+        type: "single-stim",
+        stimuli: [appModel.questionnaire3],
+        is_html: true,
+        // timing_response: exp_configCollection.meta_image_timing_response,
+        timing_post_trial: appModel.exp_configCollection.meta_timing_post_trial,
+        choices: [49, 50]
+        // response_ends_trial: false
+    };
+
+    var response3_block = {
+        type: "text",
+        text: function() {
+            //if user choses the right image then display the correct template
+            if (getResponse(appModel.questionnaire3_correct_ans)) {
+                //award them 1 point
+                appModel.questionnaire_exp_points++;
+                return _.template(appModel.correct)({'correct_msg': ''});
+            }
+            //else display the incorrect template
+            else {
+                return _.template(appModel.incorrect)({'wrong_msg': ''});
+            }
+        },
+        cont_key: "mouse"
+    };
+    
+    var questionnaire4_block = {
+        type: "single-stim",
+        stimuli: [appModel.questionnaire4],
+        is_html: true,
+        // timing_response: exp_configCollection.meta_image_timing_response,
+        timing_post_trial: appModel.exp_configCollection.meta_timing_post_trial,
+        choices: [49, 50]
+        // response_ends_trial: false
+    };
+
+    var response4_block = {
+        type: "text",
+        text: function() {
+            //if user choses the right image then display the correct template
+            if (getResponse(appModel.questionnaire4_correct_ans)) {
+                //award them 1 point
+                appModel.questionnaire_exp_points++;
+                return _.template(appModel.correct)({'correct_msg': ''});
+            }
+            //else display the incorrect template
+            else {
+                return _.template(appModel.incorrect)({'wrong_msg': ''});
+            }
+        },
+        cont_key: "mouse"
+    };
+
     // function to get the response of the user
     //if the user chose the right image then return true
     //else return false
@@ -100,6 +154,10 @@ var questionnaire_task_exp = function(appModel) {
     experiment_blocks.push(response1_block);
     experiment_blocks.push(questionnaire2_block);
     experiment_blocks.push(response2_block);
+    experiment_blocks.push(questionnaire3_block);
+    experiment_blocks.push(response3_block);
+    experiment_blocks.push(questionnaire4_block);
+    experiment_blocks.push(response4_block);
 
     jsPsych.init({
         display_element: $('#exp_target'),

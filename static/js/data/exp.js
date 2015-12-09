@@ -43,8 +43,8 @@ var exp_data = {
     "test_image_timing_response": 2500,
     "test_timing_post_trial": 1000,
 
-    "response_won":  "You have gained a point. Your total has gone up to ",
-    "response_lost": "You lost a point. Your total has gone down to  ",
-    "response_lost2": "You didn't gain a point. Your total is still "
+    "response_won":  "You have GAINED a point. Your Total has gone up to ",
+    "response_lost": "You LOST a point. Your Total has gone down to  ",
+    "response_lost2": "You didn't gain a point. Your Total is still "
 
 };

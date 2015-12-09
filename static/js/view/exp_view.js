@@ -35,10 +35,13 @@ var exp_view = function() {
         questionnaire_title : questionnaire_title_template,
         questionnaire1 : questionnaire1_template,
         questionnaire2 : questionnaire2_template,
+        questionnaire3 : questionnaire3_template,
+        questionnaire4 : questionnaire4_template,
 
         //testing templates
         testing_bird : testing_bird_template,
         testing_bird_large : testing_bird_large_template,
+        testing_bird_small : testing_bird_small_template,
         testing_images : testing_images_template,
 
         //general templates
@@ -77,6 +80,8 @@ var exp_view = function() {
         questionnaire_retry_times : 0,
         questionnaire1_correct_ans : 1,
         questionnaire2_correct_ans : 2,
+        questionnaire3_correct_ans : 1,
+        questionnaire4_correct_ans : 2,
 
         test_retry_times : 0,
         test_priming_retry_times : 0,

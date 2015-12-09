@@ -1,5 +1,5 @@
 var questionnaire2_template = ' \
-<h2>Which symbol opts you out of the test and gives you a 50% chance of getting a point</h2> \
+<h2>Which symbol would you choose if you were uncertain whether your answer was correct?</h2> \
 <br/> \
 <div class="row"> \
     <div class="col-sm-6"> \
