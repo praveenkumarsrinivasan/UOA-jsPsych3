@@ -16,6 +16,7 @@ var testing_priming_task_exp = function(appModel) {
     //compile the html templates
     var testing_bird_template = _.template(appModel.testing_bird);
     var testing_bird_large_template = _.template(appModel.testing_bird_large);
+    var testing_bird_small_template = _.template(appModel.testing_bird_small);
     var testing_images_template = _.template(appModel.testing_images);
 
     var testing_prime;
@@ -24,6 +25,10 @@ var testing_priming_task_exp = function(appModel) {
     //console.log(allocationType[allocationIndex]);
     if (allocationType[allocationIndex] == "large size") {
         testing_prime = testing_bird_large_template({
+            'memory_bird_number': memory_bird + ' condition'
+        });
+    } else if (allocationType[allocationIndex] == "small size") {
+        testing_prime = testing_bird_small_template({
             'memory_bird_number': memory_bird + ' condition'
         });
     } else {

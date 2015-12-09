@@ -1,5 +1,5 @@
 var questionnaire1_template = ' \
-<h2>Which symbol would you choose to gamble and try to win a point</h2> \
+<h2>Which symbol would you choose if you were certain that your answer was correct?</h2> \
 <br/> \
 <div class="row"> \
     <div class="col-sm-6"> \

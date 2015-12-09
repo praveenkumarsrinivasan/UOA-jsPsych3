@@ -41,6 +41,10 @@
     width: 256px;
 }
 
+.memory_image_small {
+    width: 100px;
+}
+
 #slider {
     margin: 0 auto;
     padding: 0;
