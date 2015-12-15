@@ -12,8 +12,8 @@ organization_name = University of Auckland
 browser_exclude_rule = MSIE
 
 [Database Parameters]
-database_url = mysql://uoa:uoapasswd@0.0.0.0:3306/cognitive_intelligence
-table_name = t_exp12
+database_url = mysql://uoa:uoapasswd@172.31.19.201:3306/cognitive_intelligence
+table_name = t_exp13
 
 [Server Parameters]
 host = 0.0.0.0

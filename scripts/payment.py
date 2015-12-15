@@ -28,11 +28,11 @@ def main(args):
             if match:
                 total = int(match.group(1))
                 if total >=5 and total <= 35:
-                    pay = 2.00
+                    pay = 4.00
                 elif total >= 36 and total <=45:
-                    pay = 2.50
+                    pay = 4.50
                 elif total >= 46:
-                    pay = 3.00
+                    pay = 5.00
                 else:
                     pay = 0.20
                 workerid = row['workerid']

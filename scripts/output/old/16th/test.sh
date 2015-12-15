@@ -1,0 +1,15 @@
+cd $MTURK_CMD_HOME/bin/
+./grantBonus.sh -workerid A15F2JTVAJXITI -amount 4.0 -assignment 3ERMJ6L4DZ371L2XENBVHSK2JBP7MI -reason "Bonus Payment"
+./grantBonus.sh -workerid A1DU2NW2H0ISSV -amount 4.0 -assignment 3BQU611VFQVW8K7W4B5AQ25OE2699X -reason "Bonus Payment"
+./grantBonus.sh -workerid A1FGKIKJYSL1MI -amount 0.2 -assignment 34MAJL3QP5Y9WCC46789IHRMSIH34D -reason "Bonus Payment"
+./grantBonus.sh -workerid A1G06ZVFHCPVOE -amount 4.0 -assignment 379J5II41PR84IZM1JOMNPXU5T5LEI -reason "Bonus Payment"
+./grantBonus.sh -workerid A23YOJ16ZTWQ30 -amount 4.0 -assignment 3A7Y0R2P2PZBFS23T321VZ59HA7XJX -reason "Bonus Payment"
+./grantBonus.sh -workerid A27LGC4MU1R7PQ -amount 4.5 -assignment 3EJJQNKU9SGVRQL1W4TOU43631LHRJ -reason "Bonus Payment"
+./grantBonus.sh -workerid AAEN2X0G9EACJ -amount 4.0 -assignment 3N2BF7Y2VR54UA89RWX7859WXELHMU -reason "Bonus Payment"
+./grantBonus.sh -workerid ADKKDK6P4MS1Z -amount 4.0 -assignment 34V1S5K3GTC9Q15Y642Y6SEMO1Z69K -reason "Bonus Payment"
+./grantBonus.sh -workerid AJAZ6PWRHH6D8 -amount 4.5 -assignment 3URFVVM166T9Y3DC6KU0ZMUV6ROZUF -reason "Bonus Payment"
+./grantBonus.sh -workerid AK3H5QRAROFGP -amount 4.5 -assignment 3XCC1ODXDMM84JK4FUGI3IV7UOFQRM -reason "Bonus Payment"
+./grantBonus.sh -workerid AO7FM98CP90CL -amount 4.5 -assignment 3R6BYFZZP8NVAQG7ADBGG1DHO3RFXD -reason "Bonus Payment"
+./grantBonus.sh -workerid AREYZC2P7UG8V -amount 0.2 -assignment 3HMIGG0U4MHBVGWU7VRCPN3436D8Y2 -reason "Bonus Payment"
+./grantBonus.sh -workerid AZPU6RHW9Z613 -amount 4.0 -assignment 30BUDKLTXE6U2TW19W8F601XJ335EC -reason "Bonus Payment"
+cd -
