@@ -171,7 +171,7 @@ var prt_task_exp = function(appModel) {
     //blocks in the experiment
     var experiment_blocks = [];
     experiment_blocks.push(points_block);
-    experiment_blocks.push(exp_name_block);
+    //experiment_blocks.push(exp_name_block);
     //experiment_blocks.push(welcome_block);
     experiment_blocks.push(instructions_block);
     experiment_blocks.push(dot_block);

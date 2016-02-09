@@ -11,7 +11,7 @@ var star_cloud_template = ' \
 </div> \
 <br/> \
 <div class="row"> \
-    <div class="col-sm-6"><h4 class="text-muted">Please push 1 on your keyboard</h4></div> \
-    <div class="col-sm-6"><h4 class="text-muted">Please push 2 on your keyboard</h4></div> \
+    <div class="col-sm-6"><h4 class="text-muted">Please push 8 on your keyboard</h4></div> \
+    <div class="col-sm-6"><h4 class="text-muted">Please push 9 on your keyboard</h4></div> \
 </div> \
 ';

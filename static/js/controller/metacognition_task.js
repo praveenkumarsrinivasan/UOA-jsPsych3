@@ -89,7 +89,8 @@ var metacognition_task_exp = function(appModel) {
         type: "single-stim",
         stimuli: [appModel.star_cloud],
         is_html: true,
-        choices: [49, 50]
+        //choices: [49, 50]
+        choices: [56, 57]
     };
 
     var response_block = {
@@ -154,9 +155,14 @@ var metacognition_task_exp = function(appModel) {
         var trials = jsPsych.data.getTrialsOfType('single-stim');
         var key_press = parseInt(String.fromCharCode(trials[trials.length - 1].key_press), 10);
 
-        if (key_press == 1) {
+        //if (key_press == 1) {
+            //return true;
+        //} else {
+            //return false;
+        //}
+        if (key_press == 8) {
             return true;
-        } else {
+        } else if (key_press == 9) {
             return false;
         }
     }
@@ -219,7 +225,7 @@ var metacognition_task_exp = function(appModel) {
 
     //blocks of the experiment
     var experiment_blocks = [];
-    experiment_blocks.push(exp_name_block);
+    //experiment_blocks.push(exp_name_block);
     experiment_blocks.push(dot_block);
     experiment_blocks.push(bird_block);
     //experiment_blocks.push(slider_function_block);

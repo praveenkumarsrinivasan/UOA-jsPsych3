@@ -149,7 +149,7 @@ var questionnaire_task_exp = function(appModel) {
 
     //blocks in the experiment
     var experiment_blocks = [];
-    experiment_blocks.push(exp_name_block);
+    //experiment_blocks.push(exp_name_block);
     experiment_blocks.push(questionnaire1_block);
     experiment_blocks.push(response1_block);
     experiment_blocks.push(questionnaire2_block);
