@@ -9,6 +9,55 @@ var allocation_data = {
     ],
     "allocationType2" : [
         "blur",
+        "related prime",
+        "control",
+        "large size",
+        "small size"
+    ],
+    "allocation2" : [
+        4,
+        10,
+        19,
+        26,
+        36,
+        13,
+        2,
+        27,
+        35,
+        20,
+        38,
+        1,
+        14,
+        25,
+        21,
+        37,
+        24,
+        8,
+        15,
+        28,
+        17,
+        5,
+        29,
+        9,
+        39,
+        31,
+        7,
+        16,
+        40,
+        18,
+        6,
+        12,
+        23,
+        34,
+        30,
+        11,
+        33,
+        32,
+        22,
+        3
+    ],
+    "allocationType3" : [
+        "blur",
         "low contrast",
         "related prime",
         "unrelated prime",
@@ -16,7 +65,7 @@ var allocation_data = {
         "large size",
         "high contrast"
     ],
-    "allocation2" : [
+    "allocation3" : [
         4,
         10,
         18,
@@ -66,7 +115,7 @@ var allocation_data = {
         30,
         3
     ],
-    "allocation3" : [
+    "allocation4" : [
        15,
        18,
        31,

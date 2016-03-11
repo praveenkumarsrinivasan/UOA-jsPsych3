@@ -188,7 +188,7 @@ var prt_task_exp = function(appModel) {
             appModel.prt_retry_times++;
 
             //if the user fails the test more than 5 times call exp_fail
-            if (appModel.prt_retry_times >= appModel.exp_configCollection.prt_retry_times) {
+            if (appModel.prt_retry_times > appModel.exp_configCollection.prt_retry_times) {
                 exp_fail(appModel);
                 return;
             }

@@ -233,7 +233,7 @@ var metacognition_task2_exp = function(appModel) {
             //else call exp_fail
 
             //if the number of trails exceed 8 trials then call exp_fail
-            if (appModel.meta2_retry_times >= appModel.exp_configCollection.meta2_retry_times) {
+            if (appModel.meta2_retry_times > appModel.exp_configCollection.meta2_retry_times) {
                 exp_fail(appModel);
                 return;
             }

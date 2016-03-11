@@ -13,7 +13,7 @@ browser_exclude_rule = MSIE
 
 [Database Parameters]
 database_url = mysql://uoa:uoapasswd@0.0.0.0:3306/cognitive_intelligence
-table_name = t_exp14
+table_name = t_exp15
 
 [Server Parameters]
 host = 0.0.0.0
