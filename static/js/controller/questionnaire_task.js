@@ -167,18 +167,19 @@ var questionnaire_task_exp = function(appModel) {
             appModel.questionnaire_retry_times++;
 
             //if the user fails the test more than 5 times call exp_fail
-            if (appModel.questionnaire_retry_times >= appModel.exp_configCollection.questionnaire_retry_times) {
+            if (appModel.questionnaire_retry_times > appModel.exp_configCollection.questionnaire_retry_times) {
                 exp_fail(appModel);
                 return;
             }
 
             //if user reaches '1' point i.e questionnaire_min_points call mem exp
-            if (appModel.questionnaire_exp_points == appModel.exp_configCollection.questionnaire_min_points) {
+            if (appModel.questionnaire_exp_points >= appModel.exp_configCollection.questionnaire_min_points) {
                 testing_task_exp(appModel);
             }
             //else restart the test.
             else {
                 questionnaire_task_exp(appModel);
+                appModel.questionnaire_retry_times = 0;
             }
         },
         on_data_update: function(data) {

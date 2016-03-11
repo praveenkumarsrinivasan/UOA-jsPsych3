@@ -34,15 +34,18 @@
 }
 
 .memory_image {
-    width: 190px;
+    max-height: 256px;
+    max-width: 256px;
 }
 
 .memory_image_large {
-    width: 256px;
+    max-height: 512px;
+    max-width: 512px;
 }
 
 .memory_image_small {
-    width: 100px;
+    max-height: 128px;
+    max-width: 128px;
 }
 
 #slider {

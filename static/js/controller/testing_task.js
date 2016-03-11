@@ -6,7 +6,7 @@
 
 var testing_task_exp = function(appModel) {
 
-    var allocationType = appModel.testing_configCollection.allocationType;
+    var allocationType = appModel.testing_configCollection.allocationType2;
     //var memory_images = appModel.testing_configCollection.allocation2[appModel.test_retry_times];
     //var memory_bird = memory_images[0];
     var memory_bird = appModel.testing_configCollection.allocation2[appModel.test_retry_times];
@@ -338,7 +338,7 @@ var testing_task_exp = function(appModel) {
             //total number of trails to run
             //after all the trails, compute the final award for the participant
             //also compute bonus for the person with the highest score
-            if (appModel.test_retry_times >= appModel.exp_configCollection.test_retry_times) {
+            if (appModel.test_retry_times > appModel.exp_configCollection.test_retry_times) {
                 psiturk.saveData({
                     success: function() {
                         thanks_task_exp(appModel);

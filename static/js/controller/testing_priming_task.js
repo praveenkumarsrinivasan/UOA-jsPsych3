@@ -6,7 +6,7 @@
 
 var testing_priming_task_exp = function(appModel) {
 
-    var allocationType = appModel.testing_configCollection.allocationType;
+    var allocationType = appModel.testing_configCollection.allocationType2;
     //var memory_images = appModel.testing_configCollection.allocation[appModel.test_retry_times];
     //var memory_bird = memory_images[0];
     var memory_bird = appModel.testing_configCollection.allocation2[appModel.test_retry_times];
@@ -333,7 +333,7 @@ var testing_priming_task_exp = function(appModel) {
     //experiment_blocks.push(exp_name_block);
     experiment_blocks.push(dot_block);
     experiment_blocks.push(bird_block1);
-    experiment_blocks.push(dot_block);
+    //experiment_blocks.push(dot_block);
     experiment_blocks.push(bird_block2);
     experiment_blocks.push(slider_check_chunk_loop);
     experiment_blocks.push(images_block);
@@ -351,7 +351,7 @@ var testing_priming_task_exp = function(appModel) {
             //total number of trails to run
             //after all the trails compute the final award for the participant
             //also compute bonus for the person with the highest score
-            if (appModel.test_retry_times >= appModel.exp_configCollection.test_retry_times) {
+            if (appModel.test_retry_times > appModel.exp_configCollection.test_retry_times) {
                 psiturk.saveData({
                     success: function() {
                         thanks_task_exp(appModel);

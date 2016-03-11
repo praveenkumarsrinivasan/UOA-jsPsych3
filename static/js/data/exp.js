@@ -3,7 +3,7 @@ var exp_data = {
     "mem_retry_times" : 2,
     "meta_retry_times" : 2,
     "meta2_retry_times" : 2,
-    "questionnaire_retry_times": 2,
+    "questionnaire_retry_times": 4,
 
     "prt_min_points": 1,
     "mem_min_points": 1,

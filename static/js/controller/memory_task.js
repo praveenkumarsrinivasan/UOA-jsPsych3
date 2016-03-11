@@ -210,7 +210,7 @@ var memory_task_exp = function(appModel) {
             console.log(appModel.mem_exp_points);
 
             //if the user fails the test more than 5 times call exp_fail
-            if (appModel.mem_retry_times >= appModel.exp_configCollection.mem_retry_times) {
+            if (appModel.mem_retry_times > appModel.exp_configCollection.mem_retry_times) {
                 exp_fail(appModel);
                 return;
             }
