@@ -77,6 +77,13 @@ var testing_priming_task_exp = function(appModel) {
         // response_ends_trial: false,
     };
 
+    var slider_instructions = {
+        type: "text",
+        text: appModel.slider_instructions,
+        timing_post_trial: appModel.exp_configCollection.test_timing_post_trial,
+        cont_key: "mouse"
+    };
+
     var slider_function_block = {
         type: 'slider',
         timing_trial: appModel.exp_configCollection.test_priming_slider_timing_trials,
@@ -335,6 +342,7 @@ var testing_priming_task_exp = function(appModel) {
     experiment_blocks.push(bird_block1);
     //experiment_blocks.push(dot_block);
     experiment_blocks.push(bird_block2);
+    experiment_blocks.push(slider_instructions);
     experiment_blocks.push(slider_check_chunk_loop);
     experiment_blocks.push(images_block);
     experiment_blocks.push(star_n_cloud_block);

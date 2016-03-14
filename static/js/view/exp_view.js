@@ -39,6 +39,7 @@ var exp_view = function() {
         questionnaire4 : questionnaire4_template,
 
         //testing templates
+        slider_instructions :  slider_instructions_template,
         testing_bird : testing_bird_template,
         testing_bird_large : testing_bird_large_template,
         testing_bird_small : testing_bird_small_template,
