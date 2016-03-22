@@ -91,6 +91,11 @@ var exp_view = function() {
 
         test_random_val : 0,
 
+        metacognition_task1_random_numbers : [],
+        metacognition_task2_random_numbers : [],
+        testing_random_numbers : [],
+        testing_priming_random_numbers : [],
+
     };
 
     exp_flow(appModel);

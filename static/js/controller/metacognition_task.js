@@ -124,7 +124,10 @@ var metacognition_task_exp = function(appModel) {
                 star_flag = 0;
                 //50% of the time award them '1' point
                 var prob = Math.floor((Math.random() * 2) + 1);
-                    appModel.response_change_in_points = appModel.exp_configCollection.response_lost2;
+                prob = getPseudoRandomNumber(appModel.metacognition_task1_random_numbers, prob);
+                appModel.metacognition_task1_random_numbers.push(prob);
+
+                appModel.response_change_in_points = appModel.exp_configCollection.response_lost2;
                 if (prob == 2) {
                     appModel.response_change_in_points = appModel.exp_configCollection.response_won;
                     appModel.meta_exp_points++;

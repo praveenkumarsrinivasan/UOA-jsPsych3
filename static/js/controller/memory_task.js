@@ -1,7 +1,7 @@
 /*
- * 
+ *
  * Memory Task - Experiment
- * 
+ *
  */
 
 var memory_task_exp = function(appModel) {
@@ -102,7 +102,7 @@ var memory_task_exp = function(appModel) {
         text: function() {
             //if user choses the right image then display the correct template
             if (getResponse()) {
-                //if the user succeeds then award them '1' point 
+                //if the user succeeds then award them '1' point
                 appModel.mem_exp_points++;
                 appModel.total_points++;
                 return _.template(appModel.correct)({'correct_msg': ''});
@@ -165,7 +165,7 @@ var memory_task_exp = function(appModel) {
         }
     }
 
-    //function to compute the average response time 
+    //function to compute the average response time
     //for trials where handle was clicked
     var getAverageResponseTime = function() {
         var trials = jsPsych.data.getTrialsOfType('slider');
@@ -209,7 +209,7 @@ var memory_task_exp = function(appModel) {
             appModel.mem_retry_times++;
             console.log(appModel.mem_exp_points);
 
-            //if the user fails the test more than 5 times call exp_fail
+            //if the user fails the test more than 2 times call exp_fail
             if (appModel.mem_retry_times > appModel.exp_configCollection.mem_retry_times) {
                 exp_fail(appModel);
                 return;
