@@ -39,25 +39,25 @@
 }
 
 .memory_image {
-    max-height: 409px;
-    max-width: 409px;
+    max-height: 330px;
+    max-width: 330px;
 }
 
 .memory_image_large {
-    max-height: 512px;
-    max-width: 512px;
+    max-height: 408px;
+    max-width: 408px;
 }
 
 .memory_image_small {
-    max-height: 327px;
-    max-width: 327px;
+    max-height: 264px;
+    max-width: 264px;
 }
 
 #slider {
     margin: 0 auto;
     padding: 0;
     width: 250px;
-    
+
     background: #00ff00; /* Old browsers */
     background: -moz-linear-gradient(left,  #00ff00 0%, #ff0000 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#00ff00), color-stop(100%,#ff0000)); /* Chrome,Safari4+ */
@@ -72,8 +72,8 @@
     -webkit-border-radius: 15px;
 }
 
-#slider .ui-slider-handle { 
-    border-color: black; 
+#slider .ui-slider-handle {
+    border-color: black;
     border-radius: 15px;
     -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
