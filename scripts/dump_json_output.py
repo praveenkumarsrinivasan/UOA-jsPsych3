@@ -18,7 +18,7 @@ host   = 'localhost'
 user   = 'uoa'
 passwd = 'uoapasswd'
 db     = 'cognitive_intelligence'
-table  = 't_exp14'
+table  = 't_exp16'
 
 conn = mdb.connect(host, user, passwd, db)
 cursor = conn.cursor()
